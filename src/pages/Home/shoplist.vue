@@ -12,8 +12,9 @@
                     <p class="store-name">{{item.name}}</p>
                     <div class="store-info">
                         <p class="store-rating">
-                            <img src="../../assets/image/content/fullstar.png" alt="" v-for="i in rating" :key="i">
-                            &nbsp;月售{{item.month_sale_num}}
+                            <!-- <img src="../../assets/image/content/fullstar.png" alt="" v-for="i in rating" :key="i">
+                            &nbsp;月售{{item.month_sale_num}} -->
+                            <Star :score="item.wm_poi_score"></Star>
                         </p>
                         <p class="delivery-info">
                             <span>{{item.mt_delivery_time}}</span>
@@ -36,6 +37,7 @@
 </template>
 <script>
 import { getContentList } from './../../../api/shoplist';
+import Star from './star';
 
 export default {
   name: 'shoplist',
@@ -46,6 +48,9 @@ export default {
       is_half: false,
       blankRating: 0,
     };
+  },
+  components: {
+    Star,
   },
   created() {
     getContentList().then((data) => {
