@@ -1,5 +1,5 @@
 <template>
-    <span class="star">
+    <span class="star" @click="greeting">
         <img class="star" src="../../assets/image/content/fullstar.png" alt="" v-for="(i,index) in fullStar" :key="index">
         <img class="star" src="../../assets/image/content/halfstar.png" alt="" v-if="halfStar">
         <img class="star" src="../../assets/image/content/gray-star.png" alt="" v-for="(i,index) in blankStar" :key="index">
@@ -31,7 +31,17 @@ export default {
     this.halfStar = (this.score - this.fullStar) > 0;
     // eslint-disable-next-line radix
     this.blankStar = parseInt((5 - this.score));
-    console.log(this.score, this.fullStar, this.halfStar, this.blankStar);
+    // console.log(this.score, this.fullStar, this.halfStar, this.blankStar);
+  },
+  methods: {
+    greeting() {
+      console.log('hahaha');
+    //   this.$router.push({ path: '/home' });
+    //   console.log('ok');
+    //   if (this.name === 'Home') {
+    //     return;
+    //   }
+    },
   },
 };
 </script>

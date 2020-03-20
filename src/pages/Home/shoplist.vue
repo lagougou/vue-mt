@@ -13,8 +13,9 @@
                     <div class="store-info">
                         <p class="store-rating">
                             <!-- <img src="../../assets/image/content/fullstar.png" alt="" v-for="i in rating" :key="i">
-                            &nbsp;月售{{item.month_sale_num}} -->
+                             -->
                             <Star :score="item.wm_poi_score"></Star>
+                            <span>&nbsp;月售{{item.month_sale_num}}</span>
                         </p>
                         <p class="delivery-info">
                             <span>{{item.mt_delivery_time}}</span>
@@ -55,7 +56,7 @@ export default {
   created() {
     getContentList().then((data) => {
       this.content = data.data.poilist;
-      console.log(this.content);
+    //   console.log(this.content);
     });
   },
   methods: {
