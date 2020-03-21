@@ -1,0 +1,25 @@
+<template>
+    <div>
+        <mt-header  title="订单" class="header"></mt-header>
+    </div>
+</template>
+<script>
+export default {
+    name: 'header'
+}
+</script>
+<style scoped>
+
+
+    .header {
+        width: 100%;
+    height: 1.706667rem;
+    background-color: #fff;
+    border-bottom: 1px solid #b2b2b2;
+    color: #333;
+    font-size: 0.48rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.706667rem;
+    }
+</style>
