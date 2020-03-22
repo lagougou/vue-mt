@@ -25,6 +25,8 @@ export default {
     width: 100%;
   }
 
-
+  #app{
+    height: 100vh;
+  }
 </style>
 
